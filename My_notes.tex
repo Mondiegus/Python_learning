@@ -21,12 +21,12 @@
     \begin{itemize}
       \item supervised
       \item unsupervised
-      \item halfsupervised
-      \item learning by strengthening
+      \item semisupervised
+      \item reinforcement learning
     \end{itemize}
       \item possibility of real-time learning
     \begin{itemize}
-      \item incremental
+      \item incremental/online learning
       \item batch
     \end{itemize}
       \item the type of working
@@ -116,11 +116,50 @@ The main task is to assign data to categories which are containning similar data
    \newpage
 
   \subsection{Reinforcement learning}
-  This topic is very interesting from my perspective. Learning system, named in this context \textbf{the agent} may observe environment, make some actions and also receive rewards or panalities(rewards with negative value). This policy forces him to elaborate the best strategy to get the biggest reward. This policy enforce type of action that agent have to do aa
+  This topic is very interesting from my perspective. Learning system, named in this context \textbf{the agent} may observe environment, make some actions and also receive rewards or panalities(rewards with negative value). This policy forces him to elaborate the best strategy to get the biggest reward. This policy enforce type of action that agent have to do.
+
+    \subsubsection{Example}
+    The great example of this method are selfdriving cars, which have to analyse data whole time and take some action based on collected informations. Also AlphaGo is an example of this method. Program which were learning how to play in Go, developed strategy that gave it a victory over a human master of Go.
+  
+  \newpage
+
+  \subsection{Batch learning}
+  Using this method enforce on developer to deliver all data to system, because it have to use all data to learn. This usually mean that application will use a significant amount of time and resources, and this is the reason is always made offline. System is firstly teaching and in the next step implemented to production cycle and never more trained. It is using only resources that it already have. This phenomenon is sometimes called offline learning. 
+
+  It means that if you want to use some new data, you have to train all your system from the beggining with new and old data. Then turn off old system and turn on the new one. Fortunately, this process can be automated, so this system is able to still learning based on new data. This is very simply but also very efficient. Drawback of this algorithm is time that and resources of the machine that you have to sacrifice to 
 
   \newpage
 
 \subsection{Subsection}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
