@@ -1,0 +1,163 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Machine learning in python \\ My notes}
+
+\date{2019-11-23}
+\author{Maciej jarosz}
+
+\begin{document}
+\maketitle
+\newpage
+\pagenumbering{gobble}
+
+\section{Theoretical bullshit}
+
+  \subsection{Introduction}
+
+  We can divide types of machine learning systems in to few categories because of:
+  \begin{itemize}
+    \item type of supervision in training process
+    \begin{itemize}
+      \item supervised
+      \item unsupervised
+      \item halfsupervised
+      \item learning by strengthening
+    \end{itemize}
+      \item possibility of real-time learning
+    \begin{itemize}
+      \item incremental
+      \item batch
+    \end{itemize}
+      \item the type of working
+    \begin{itemize}
+      \item simple comparition of new data points with already known points
+      \item detection of patterns in learning data and creating production model
+    \end{itemize}
+  \end{itemize}
+  \newpage
+
+  \subsection{Supervised learning}
+
+  In supervised learning data transmitted to algorithm contain attached problem solutions, the so called labels.
+
+    \subsubsection{Examples}
+
+    Typical task of supervised learnning is classification. Spam filter is great example. In this case it is trained by a huge amount of sample messages belonging to given slacc (spam or ham), thank to wchich it need to be able to classify a new messages.
+
+    Another typical task of supervised learning is prediction of the target numerical value. For example like car price using a features named predictors. This type of the task is called regression.
+
+    \subsubsection{Therminology}
+
+    In the terminology of ML \textbf{attribute} is type of data (przebieg samochodu), while \textbf{feature} depend on context, can have many of different meaning. Usually when we talk about feature, we think about attribute with it value.
+
+    \subsubsection{Types}
+    This is the list of the most imporatnt supervised learning algorithms:
+    \begin{itemize}
+      \item K-nearest neighbors - k-nn method
+      \item linear method
+      \item logistic regression
+      \item Support Vector Machine - \textbf{SVM}
+      \item decision trees and random forests
+      \item nural networks
+    \end{itemize}
+  
+  \newpage
+
+  \subsection{Unsupervised learning}
+
+The main task is to assign data to categories which are containning similar data, based on their features
+
+    \subsubsection{Types}
+    This is the list of the most imporatnt unsupervised learning algorithms, because of:
+      \begin{itemize}
+        \item Data clustering
+          \begin{itemize}
+            \item k-means
+            \item hierarchical cluster analisys - \textbf{HCA}
+            \item expectation-maximalization algorithm - \textbf{EM}
+          \end{itemize}
+        \item Visualization and dimensionality reduction
+          \begin{itemize}
+            \item principal component analysis - \textbf{PCA}
+            \item Kernel PCA
+            \item locally linear embedding - \textbf{LLE}
+            \item t-distributed stochastic neighbor embedding
+          \end{itemize}
+        \item learning by using associative rules
+          \begin{itemize}
+            \item Apriori algorithm
+            \item Eclat algorithm
+          \end{itemize}
+      \end{itemize}
+
+    \subsubsection{Example}
+
+      Let's assume, You have big amount of data about users visiting your 
+    webside. You can use clusterring to try define groups of similar users. W any moment you can check into whichgroup any user fall into. Every connection between users are made without you interfere. Why? What can give to you? For example you can find out that 40\% of your comics are read in the evenings and 20\% of users are passionate in science and their are visiting your webside  onsly in weekends.
+
+    If you will use \textbf{Hierarchical cluster analisys} you can divide this groups into smaller subgroups. In this case for example, you can easier decide what kind of posts entries for individual groups.
+
+    Another example are \textbf{Visualization algorithms}. You can upload huge amount of different data which will be presented in 2D or 3D chart. These algorithms tries to save primary structure of data, so you can easier analyze this data and maybe discover some unforeseen patterns.
+
+    \textbf{Dimensionality reduction} algorithms tries to make your data more simply but without loss excessive number of information. We can get this result by merging few attributes in one based on their high correlation level. For example we can correlate the age of the car with it mileage. This procces is called \textbf{feature extractions}
+
+    Another important task is \textbf{anomaly detection}. Good example is to discover some unusual operation on your debit card. Long story short, we can use it to detect some annomaly in our dataset before we end it do our model.
+
+    Another one, commonly used algorithm is \textbf{association rule learning}. It task is to analize very huge abount of data and find some interesing dependenties between atributes. For example by using this method we can discover that people who are when buing ketchup and chips are also often than the other buing steaks.
+  \newpage
+
+  \subsection{Semisupervised learning}
+  Some of algorithms are able to process partially marked learning data,  mostly composed from unmarked and only a little percent of marked data. Most Semisupervisedlearning algorithm are consisted of supervised and unsupervised learning methods. Example in here can be \textbf{deep belief networks} which are arranged in layers unsupervised elements, called restricted Boltzmann machines. These machines are taught sequentially in unsupervised way, a next whole system are tuned by supervised learning techniques.
+  
+    \subsubsection{Example}
+    Good example can be google photos. We use unsupervised learning to categorize our photos, then tag some people on our photo and then use supervised learning to give our system ability to recognize every people in the picture.
+  
+   \newpage
+
+  \subsection{Reinforcement learning}
+  This topic is very interesting from my perspective. Learning system, named in this context \textbf{the agent} may observe environment, make some actions and also receive rewards or panalities(rewards with negative value). This policy forces him to elaborate the best strategy to get the biggest reward. This policy enforce type of action that agent have to do aa
+
+  \newpage
+
+\subsection{Subsection}
+
+
+
+Structuring a document is easy!
+
+\[    % <-- start math environment
+R_z (\theta)=
+\begin{bmatrix}
+    \cos(\theta) & \sin(\theta)  & 0 \\
+    \sin(\theta) &  \cos(\theta)  & 0 \\
+    0            & 0             & 1
+\end{bmatrix}
+\]    % <-- end of math environment
+
+\subsubsection{Subsubsection}
+
+More text.
+
+\begin{equation*}
+  f(x) = x^2
+\end{equation*}
+\begin{align*}
+  f(x) &= x^2\\
+  g(x) &= \frac{1}{x}\\
+  F(x) &= \int^a_b \frac{1}{3}x^3
+\end{align*}
+
+\(\frac{1}{\sqrt{x}}\)
+
+\paragraph{Paragraph}
+
+Some more text.
+
+\subparagraph{Subparagraph}
+
+Even more text.
+
+\section{Another section}
+
+\end{document}
