@@ -155,8 +155,41 @@ The main task is to assign data to categories which are containning similar data
   \begin{equation*}
     f(\theta) = \theta * \theta * parametric_value
   \end{equation*}
-  The only problem is to find this two theta parameters. how can I know what value will give me the best result? We should use to this \textbf{learning rate}. U can also \textbf{utility function}(also called \textbf{matching function}), which tells us how good is our model and \textbf{cost function} which have totally opposite meaning. In case of linera regression our task is to minimalize distance between our predicted function and the nearest learning points. \textbf{So right now we can see what linear regression method are doing: it is just fitting this theta parameters to our linear function.} This the simplies method of prediction is called \textbf{k-nearest neghbours.}
-     \newpage
+  The only problem is to find this two theta parameters. how can I know what value will give me the best result? We should use to this \textbf{learning rate}. U can also \textbf{utility function}(also called \textbf{matching function}), which tells us how good is our model and \textbf{cost function} which have totally opposite meaning. In case of linera regression our task is to minimalize distance between our predicted function and the nearest learning points. \textbf{So right now we can see what linear regression method are doing: it is just fitting this theta parameters to our linear function.} This the simplies method of prediction is called \textbf{k-nearest neghbours.} It will be detailed discussed in the following part of this document.
+  
+  \newpage
+  
+  \subsection{Main problems of ML}
+  Yeah, it look too good to be thuth. ML is big oppourtunity but also have so big drawbacks. If we think about it, the first things that are comming to our mind is \textbf{wrong algorithm} or \textbf{problem with data}. Let's start from the data problem.
+  
+    \subsubsection{Data deficiency}
+    To teach a little child how to speak "mom" or how apple looks like you have to speak a thousands of different words, or show many, many thing included apple. This kid need to see many shapes, colors etc. Need to hears many different sounds included this special one. Only in this case it can learn how to think, how everything looks, sounds and smell. Ok, but this is very, very good situation. Humans are very intelligent. 
+    
+    Our systems are not xD To train our system we often need bilions of data, even in some simple cases and advanced models. BTW. There was a lot of experiments that shows that in the case of very big data, the simpliest and more, more complex algorithms give basicly the same result. Anyway, we have to remember that most data that we are working on are not so big, so we can't belittle the meaning of algorithms.
+
+    \subsubsection{Unrepresentative data}
+    The next problem of packs of data is what exacly are inside of them. We need to have well prepared data for our purposes. That mean that i.e. when we are doing some prediction based on Ikea's furniture prices we need to have all type of the furnitue available in this shop. In other case, our predictions will be just corrupted and our main goal won't be achieved. 
+
+    We can also have huge problem because we will have even much more data than we need but that will have just \textbf{sampling noise} which mean that we have some data that is burdned with the big error. It can happen i.e. when we are colleting data from some sensor and it will break for some time. Also the big problem is \textbf{sampling bias}. For example we have 100 sensors but we are collecting data only from 25. They also can be placed in different environment or something like that. Some of them can also be broken and that is the reason why we didn't collect data from them. The last case is called \textbf{nonresponse bias}.
+  
+    \subsection{Poor quality of data}
+    This is another problem but it could sounds similar to previous. In a situation where we have a lot of noise, data burdned with big error or similar, we should clean our dataset. There a lot of different options, only only limit is creativity of developer, he can i.e. delete data or flll missing values. 
+
+    \subsection{Negligible features}
+    \textbf{Can't make something out of nothing.} To many features are bad because system have to analise them and it take time and resources. Process of selecting the right data is called \textbf{feature engineering} and it is consist of:
+    \begin{itemize}
+      \item feature selection: selection of the most useful features among available
+      \item feature extractions: combining alredy existed feature to create some more useful (we can use to do this dimensionality reduction algorithm)
+      \item creating new features from new data
+      
+    \end{itemize}
+    
+    \subsection{Overfitting}
+    For example, you bought something on popular auction site and you were cheated. You may want to say that is portal is crap and all sellers are thieves. This behaviour in ML have it own name and this is \textbf{overfitting}. This mean taht our model is doing well in case of our learning dataset but not when we try to give him new data. This can happen when our model is overcomplicated and we have to less data or this data is very noised. Imagine, that you want to predict price of a car based on your data. When you will have overfitted data, your system can find some pattern that shows that cars made by manufacturers with letter "b" in name are very expensive because of Bentley na Bugatti. But, is this mean that Mitsubishi is albo worth bilions of dollars? Propably no. In that case you have to optimize your data and this process is called \textbf{regularization}. You can do this by collecting more data, make your model simplier or reduce noise. Level of regularization can be controlled by hyperparameters. it is the name of learning algorithm's parameter. They aren't modified by algorithm, we have to specify them before we use it.
+
+    \subsection{Underfitting} 
+    If we have over- then we should have underfitting. I think that now it is quite simple to understand problem and i don't have to write about it. Long story short: We have to simple model and to complicated dataset.
+  \newpage
 
 \subsection{Subsection}
 
@@ -191,7 +224,7 @@ The main task is to assign data to categories which are containning similar data
 
 
 
-Structuring a document is easy!
+Structuring a document is easy!aaa
 
 \[    % <-- start math environment
 R_z (\theta)=

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1575489358 "c:/Users/KompDell/Documents/Python_learning/My_notes.tex" "c:/Users/KompDell/Documents/Python_learning/My_notes.pdf" "My_notes" 1575489358
+["pdflatex"] 1575497071 "c:/Users/KompDell/Documents/Python_learning/My_notes.tex" "c:/Users/KompDell/Documents/Python_learning/My_notes.pdf" "My_notes" 1575497103
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -36,13 +36,13 @@
   "C:/Program Files/MiKTeX 2.9/tex/latex/base/size10.clo" 1573424404 8446 1f8cadb2c4b2fd1ad8a2d81d1490f997 ""
   "C:/Users/KompDell/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1574458038 4264616 53864959c62023b87c5b7ec78bbd06c8 ""
   "C:/Users/KompDell/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1574457995 80453 73224248f0a73acd005b5611945eaaa6 ""
-  "My_notes.aux" 1575489358 2287 ab7dc1b76936c0a8e8f763d8c29f05a5 "pdflatex"
-  "My_notes.tex" 1575489357 12274 90248f2828f389ee8edaa056b3472b74 ""
-  "c:/Users/KompDell/Documents/Python_learning/My_notes.aux" 1575489358 2287 ab7dc1b76936c0a8e8f763d8c29f05a5 ""
-  "c:/Users/KompDell/Documents/Python_learning/My_notes.tex" 1575489357 12274 90248f2828f389ee8edaa056b3472b74 ""
+  "My_notes.aux" 1575497072 3050 98c95d8b4932897b671fa396e4c83962 "pdflatex"
+  "My_notes.tex" 1575497102 16696 25cfe33dd38ab2762350719ad8db9862 ""
+  "c:/Users/KompDell/Documents/Python_learning/My_notes.aux" 1575497072 3050 98c95d8b4932897b671fa396e4c83962 ""
+  "c:/Users/KompDell/Documents/Python_learning/My_notes.tex" 1575497102 16696 25cfe33dd38ab2762350719ad8db9862 ""
   (generated)
-  "My_notes.aux"
+  "My_notes.pdf"
   "c:/Users/KompDell/Documents/Python_learning/My_notes.log"
   "c:/Users/KompDell/Documents/Python_learning/My_notes.pdf"
-  "My_notes.pdf"
+  "My_notes.aux"
   "My_notes.log"
