@@ -130,6 +130,34 @@ The main task is to assign data to categories which are containning similar data
 
   \newpage
 
+  \subsection{Online learning}
+  In oposition to \textbf{batch learning}, system is train periodically by sequential data delivery. They can be single or take form of mini-batches, so small data sets. Every step is quick and don't cost much, so system is able to use new data every time when they appear.
+
+  One of the most important feature of online learning is \textbf{learning rate} which define the speed of system adjust to changing data. High learning rate means that our system will fast adjust to new data but also fast forgetting the old ones. On the other hand, low learning rate have big inertia factor which mean that system will learning slower but it will be more resistant to interference and some strange, uncorrelated data.
+
+  Big drawback of this system is tendency to decrease performance when it get some incorrect data, for example from destroyed sensor. Of course, you can minimalize risk of this situation but it forces monitoring of your system and stop analizing the data then some wrong situation happen. You can use for this some \textbf{anomaly detection algorithm}
+
+  \textbf{Out-of-core learning} is another type of online learning, used when data used to learn system are to big for out physical memory. In this case we are loading only part of data, teaching system, and then loading another part of this data and learning system with all infomation.
+
+
+    \subsubsection{Examples}
+    This method is great when system have to learning in real-time and take some fast decision, for example in autonomous racing cars in formula student turnament. it is also very useful when we have limited resources: i.e. we can delete old, already used data.
+  \newpage
+
+  \subsection{Learning from examples/from model}
+  We can divide also our system in term of generalization: learning from examples and learning from model.
+
+  First method is called /textbf{instance-based learning}. In this case system is learning by heart and then he compare it with new samples by measure of probability. There is no any complicated math or something. It is just checking data by some features.
+
+  Second method is model based learning. It is based on create model from our data and use it to predict the value of new data. We can use many types of models: linear, random trees, decision trees and many, many others.
+  
+  Let's look at the simpliest. Using this equation we can write any linear function:
+  \begin{equation*}
+    f(\theta) = \theta * \theta * parametric_value
+  \end{equation*}
+  The only problem is to find this two theta parameters. how can I know what value will give me the best result? We should use to this \textbf{learning rate}. U can also \textbf{utility function}(also called \textbf{matching function}), which tells us how good is our model and \textbf{cost function} which have totally opposite meaning. In case of linera regression our task is to minimalize distance between our predicted function and the nearest learning points. \textbf{So right now we can see what linear regression method are doing: it is just fitting this theta parameters to our linear function.} This the simplies method of prediction is called \textbf{k-nearest neghbours.}
+    \newpage
+
 \subsection{Subsection}
 
 

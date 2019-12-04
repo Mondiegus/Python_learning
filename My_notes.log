@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.22)  1 DEC 2019 23:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.22)  4 DEC 2019 20:42
 entering extended mode
 **c:/Users/KompDell/Documents/Python_learning/My_notes.tex
 (c:/Users/KompDell/Documents/Python_learning/My_notes.tex
@@ -97,7 +97,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
- [1] [2] [3] [4] [5] [6] [7] [8] (c:/Users\KompDell\Documents\Python_learning\My_notes.aux) ) 
+ [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] (c:/Users\KompDell\Documents\Python_learning\My_notes.aux) ) 
 Here is how much of TeX's memory you used:
  899 strings out of 492450
  10387 string characters out of 3129739
@@ -105,11 +105,11 @@ Here is how much of TeX's memory you used:
  5312 multiletter control sequences out of 15000+200000
  9023 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,8n,23p,622b,185s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,8n,23p,758b,185s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on c:/Users\KompDell\Documents\Python_learning\My_notes.pdf (9 pages, 136608 bytes).
+Output written on c:/Users\KompDell\Documents\Python_learning\My_notes.pdf (11 pages, 145789 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
