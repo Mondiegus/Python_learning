@@ -133,7 +133,7 @@ with mss.mss() as sct:
         # mask = cv2.bitwise_and(img, img, mask=mask)
 
         # vertices = np.array([[160, 250], [250, 200], [370, 200], [480, 250]])
-        vertices = np.array([[160, 350], [160, 260], [250, 200], [370, 200], [480, 260], [480, 350], [410, 350], [350, 260], [290, 260], [230, 350]])
+        vertices = np.array([[160, 350], [160, 280], [280, 200], [360, 200], [480, 280], [480, 350], [410, 350], [350, 250], [270, 250], [230, 350]])
 
         cropped_edges = roi(mask, [vertices])
         cropped_edges2 = roi(img, [vertices])
@@ -146,27 +146,27 @@ with mss.mss() as sct:
 
         if m1 == 1 and m2 == 1:
             # keyboard.press('W')
-            keyboard.release('D')
+            keyboard.release('d')
             keyboard.release('A')
         if m1 == 0 and m2 == 1:
             # keyboard.release('W')
-            keyboard.release('D')
+            keyboard.release('d')
             keyboard.press('A')
         if m1 == 1 and m2 == 0:
             # keyboard.release('W')
             keyboard.release('A')
-            keyboard.press('D')
+            keyboard.press('d')
         if m1 == 0 and m2 == 0:
             # keyboard.release('W')
-            keyboard.release('D')
+            keyboard.release('d')
             keyboard.release('A')
             pass
 
         # Display the picture in HSV
-        # cv2.imshow('OpenCV/Numpy grayscale1', mask)
-        # cv2.imshow('OpenCV/Numpy grayscale2', processed_img)
+        cv2.imshow('OpenCV/Numpy grayscale1', mask)
+        cv2.imshow('OpenCV/Numpy grayscale2', processed_img)
         cv2.imshow('OpenCV/Numpy grayscale3', img)
-        # cv2.imshow('OpenCV/Numpy grayscale4', cropped_edges2)
+        cv2.imshow('OpenCV/Numpy grayscale4', cropped_edges2)
 
         print("time: {}".format(time.time() - last_time))
         print("fps: {}".format(1 / (time.time() - last_time)))
