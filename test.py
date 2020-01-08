@@ -2,8 +2,11 @@ import numpy as np
 import cv2
 import time
 import mss
-import numpy
+import pandas as pd
 import keyboard
+import os
+
+
 
 def make_points(frame, line):
     height, width = frame.shape
@@ -108,13 +111,35 @@ def process_img(original_image):
 
 with mss.mss() as sct:
     # Part of the screen to capture
-    monitor = {"top": 30, "left": -1920, "width": 640, "height": 480}
+    # monitor = {"top": 30, "left": -1920, "width": 640, "height": 480}
+    monitor = {"top": 30, "left": 0, "width": 640, "height": 480}
+    output_data = [0, 0, 0]
+    filenameX = f"D:\\PngOutput\\training_dataX.npy"
+    filenameY = f"D:\\PngOutput\\training_dataY.npy"
+    if os.path.isfile(filenameX):
+        print("file exist, loading prev data!")
+        training_dataX = list(np.load(filenameX))
+        training_dataY = list(np.load(filenameY))
+    else:
+        print("file not exist, creating new one!")
+        training_dataX = []
+        training_dataY = []
 
     while "Screen capturing":
         last_time = time.time()
 
+        # output_pic = f"D:\\PngOutput\\sct-{last_time}.png"
+
+        # # Grab the data
+        # sct_img = sct.grab(monitor)
+
         # Get raw pixels from the screen, save it to a Numpy array
-        img = numpy.array(sct.grab(monitor))
+        img = np.array(sct.grab(monitor))
+        img_resized = cv2.resize(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), (48, 64))
+
+        # # Save to the picture file
+        # mss.tools.to_png(sct_img.rgb, sct_img.size, output=output_pic)
+
 
         # Display the picture
         #cv2.imshow("OpenCV/Numpy normal", img)
@@ -125,7 +150,7 @@ with mss.mss() as sct:
         # Get lines color
         mask_yellow = cv2.inRange(img_HSV, (27, 80, 130), (30, 175, 255))
         mask_black = cv2.inRange(img_HSV, (0, 0, 0), (180, 255, 1))
-        mask_brown = cv2.inRange(img_HSV, (10, 40, 150), (20, 88, 230))
+        mask_brown = cv2.inRange(img_HSV, (10, 60, 100), (20, 88, 230))
 
 
         mask = cv2.bitwise_or(mask_yellow, mask_black)
@@ -141,35 +166,52 @@ with mss.mss() as sct:
         processed_img = cv2.Canny(processed_img, threshold1=150, threshold2=200)
         line_segments = cv2.HoughLinesP(processed_img, 1, np.pi / 180, 10, np.array([]), minLineLength=9, maxLineGap=1)
         lane_lines, m1, m2 = average_slope_intercept(processed_img, line_segments)
-        print(m1, m2)
+        # print(m1, m2)
         draw_lines(img, lane_lines)
 
         if m1 == 1 and m2 == 1:
-            # keyboard.press('W')
+            keyboard.press('W')
+            time.sleep(0.08)
+            keyboard.release('W')
+            time.sleep(0.16)
             keyboard.release('d')
             keyboard.release('A')
+            output_data = [0, 1, 0]
+
         if m1 == 0 and m2 == 1:
             # keyboard.release('W')
             keyboard.release('d')
             keyboard.press('A')
+            output_data = [1, 0, 0]
+
         if m1 == 1 and m2 == 0:
             # keyboard.release('W')
             keyboard.release('A')
             keyboard.press('d')
+            output_data = [0, 0, 1]
+
         if m1 == 0 and m2 == 0:
             # keyboard.release('W')
             keyboard.release('d')
             keyboard.release('A')
+            output_data = [0, 0, 0]
             pass
 
-        # Display the picture in HSV
-        cv2.imshow('OpenCV/Numpy grayscale1', mask)
-        cv2.imshow('OpenCV/Numpy grayscale2', processed_img)
-        cv2.imshow('OpenCV/Numpy grayscale3', img)
-        cv2.imshow('OpenCV/Numpy grayscale4', cropped_edges2)
+        training_dataX.append([img_resized])
+        training_dataY.append([output_data])
 
-        print("time: {}".format(time.time() - last_time))
-        print("fps: {}".format(1 / (time.time() - last_time)))
+        if len(training_dataY) % 500 == 0:
+            print(len(training_dataY))
+            np.save(filenameX, training_dataX)
+            np.save(filenameY, training_dataY)
+        # Display the picture in HSV
+        # cv2.imshow('OpenCV/Numpy grayscale1', mask)
+        # cv2.imshow('OpenCV/Numpy grayscale2', processed_img)
+        cv2.imshow('OpenCV/Numpy grayscale3', img)
+        # cv2.imshow('OpenCV/Numpy grayscale4', cropped_edges2)
+
+        # print("time: {}".format(time.time() - last_time))
+        # print("fps: {}".format(1 / (time.time() - last_time)))
 
         # Press "q" to quit
         if cv2.waitKey(25) & 0xFF == ord("q"):
