@@ -32,7 +32,7 @@ def process_image(image):
 # In[7]:
 
 
-model = load_model('d:\Pliki ściągnięte\mymodel.h5')
+model = load_model('d:\Pliki ściągnięte\ymodel11.h5')
 
 
 # In[14]:
